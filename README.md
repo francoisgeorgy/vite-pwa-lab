@@ -7,19 +7,17 @@ https://vite-plugin-pwa.netlify.app/
 Create the project scaffolding:
 
     npm init vite
-
-Install the dependencies:
-
     cd vite-pwa-lab/
     pnpm install
 
-    pnpm i workbox-window -D
-
-Test:
+Basic test:
 
     pnpm dev
 
 ## PWA
 
     pnpm i vite-plugin-pwa -D
+    pnpm i workbox-window -D
+    pnpm i @rollup/plugin-replace -D
+
 
