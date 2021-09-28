@@ -4,6 +4,7 @@ import {VitePWA} from 'vite-plugin-pwa'
 import replace from '@rollup/plugin-replace'
 
 // https://vitejs.dev/config/
+// @ts-ignore
 export default defineConfig({
     build: {
         sourcemap: process.env.SOURCE_MAP === 'true',
@@ -14,10 +15,13 @@ export default defineConfig({
         VitePWA({
             mode: 'development',
             base: '/lab-pwa/',
-            includeAssets: ['favicon.svg'],
+            includeAssets: [
+                'favicon.svg',
+                'acme/*'
+            ],
             manifest: {
-                name: 'PWA Basic',
-                short_name: 'PWA Basic',
+                name: 'Vite PWA Lab',
+                short_name: 'Vite PWA Lab',
                 theme_color: '#ffffff',
                 icons: [
                     {
@@ -40,8 +44,8 @@ export default defineConfig({
             },
         }),
         replace({
-            __DATE__: new Date().toISOString(),
-            preventAssignment: true
+            preventAssignment: true,
+            '__DATE__': new Date().toISOString()
         })
     ]
 })

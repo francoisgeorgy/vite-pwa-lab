@@ -3,7 +3,7 @@ import ReloadPrompt from "./ReloadPrompt";
 
 function App() {
 
-    const date = '__DATE__'
+    const date = '__DATE__';
 
     return (
         <div className="App">
