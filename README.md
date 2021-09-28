@@ -24,7 +24,7 @@ Test PWA:
 
     pnpm run build && pnpm run serve
 
-https:
+### https:
 
 https://vite-plugin-pwa.netlify.app/guide/testing.html#testing-service-worker-over-https
 

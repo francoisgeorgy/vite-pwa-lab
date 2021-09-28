@@ -9,7 +9,7 @@ function App() {
         <div className="App">
             <h1>Vite PWA Lab</h1>
             <h3>Built at: {date}</h3>
-            <h3>3</h3>
+            <h3>6</h3>
             <ReloadPrompt />
         </div>
     )

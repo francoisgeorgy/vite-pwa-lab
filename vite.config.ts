@@ -5,7 +5,8 @@ import replace from '@rollup/plugin-replace'
 
 // https://vitejs.dev/config/
 // @ts-ignore
-export default defineConfig({
+// export default defineConfig({    // defineConfig will throw TS warning rel. to replace()
+export default {
     build: {
         sourcemap: process.env.SOURCE_MAP === 'true',
     },
@@ -15,6 +16,7 @@ export default defineConfig({
         VitePWA({
             mode: 'development',
             base: '/lab-pwa/',
+            registerType: 'autoUpdate',
             includeAssets: [
                 'favicon.svg',
                 'acme/*'
@@ -45,8 +47,8 @@ export default defineConfig({
         }),
         replace({
             preventAssignment: true,
-            '__DATE__': new Date().toISOString()
+            __DATE__: new Date().toISOString(),
         })
     ]
-})
+}
 
